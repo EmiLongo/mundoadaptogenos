@@ -1,0 +1,176 @@
+body{
+    background-color: rgba(0, 0, 0, 0.0005);
+}
+#melenaMushroomTitle{
+    background-image: url("../img/melena/melena4.jpg");
+}
+#cordycepsMushroomTitle{
+    background-image: url("../img/cordyceps/cordyceps03.jpg");
+}
+#colapavoMushroomTitle{
+    background-image: url("../img/cola_pavo/cola_pavo10.jpg");
+}
+#reishiMushroomTitle{
+    /* cambiar */
+    background-image: url("../img/reishi/reishi1.jpeg");
+}
+
+.mushroomTitle{
+    margin: 0;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 15%; */
+}
+.mushroomTitle h2{
+    font-size: 4em;
+    margin: 0;
+    margin-bottom: 0.5em;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: .11em;
+    text-shadow: -1px -1px 0px #00000045,
+    3px 3px 0px #00000095,
+    6px 6px 0px #00000055;
+}
+
+.mushroomTitle h3{
+    margin: 0.5em;
+    font-family: 'Homenaje', sans-serif;
+    font-size: 2em;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    /* background-color: rgba(17, 25, 40, 0.75); */
+}
+#cordycepsMushroomTitle{
+    font-size: 0.8em;
+}
+#colapavoMushroomTitle{
+    color: white;
+}
+
+.mushroomSubtitle{
+    display: flex;
+    align-items: center;
+    color: rgba(0,0,0,0.8);
+    background-color: #FCDADA;
+    /* background-color: #eeaeca61; */
+    height: 30vh;
+    padding: 0 2em;
+    font-family: 'Homenaje', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.4em;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+#reishiMushroomSubtitle{
+    padding: 0 1em;
+    font-size: 1.7em;
+
+}
+.mushroomProperties{
+    background-color: white;
+    width: 95vw;
+    margin: 2.5vw;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    text-align: justify;
+}
+#indexPage{
+    background-color: white;
+
+}
+#indexPage h2, .mushroomProperties h2{
+    font-size: 2em;
+    padding-top: 1em;
+    text-wrap: balance;
+    text-align: center;
+    color: rgb(126, 54, 241);
+}
+#indexPage ul{
+    font-size: 1.5em;
+}
+#indexPage li{
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+#indexPage a:link, #indexPage a:visited, #indexPage a:hover, #indexPage a:active{
+    text-decoration: none;
+}
+
+.mushroomProperties p{
+    font-size: 1.5em;
+    padding: 0.5em;
+    text-wrap: balance;
+}
+
+.mushroomImg img{
+    width: 100%;
+    height: auto;
+}
+/* #mushroomComponentsContainer{
+    background-image: url("../img/melena/melena4.jpg");
+    background-position: center;
+} */
+#mushroomComponents{
+    /* background-color: rgba(223, 165, 165, 0.15); */
+    /* background: radial-gradient(circle, rgba(148,63,251,0.4) 15%, rgba(173,49,74,0.05) 100%); */
+    background: radial-gradient(circle, rgba(251,167,63,0.2) 15%, rgba(173,49,74,0.05) 100%);
+    margin: 2.5vw;
+    width: 95vw;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.55);
+}
+#mushroomComponents h2{
+    padding: 10vw 10vw 0 10vw;
+    font-size: 2em;
+    color: rgb(141, 79, 241);
+    text-align: center;
+}
+#mushroomComponents h3{
+    color: rgba(0,0,0,0.75);
+    padding: 0 5vw;
+    text-align: center;
+}
+#mushroomComponents ul{
+    list-style-type: none;
+    font-size: 1.5em;
+
+}
+#mushroomComponents h3:last-child{
+    padding-bottom: 10vw;
+
+}
+
+#mushroomComponents li{
+    padding: 0.3em;
+}
+.red{
+    color:red;
+    font-weight: bold;
+}
+.center{
+    text-align: center;
+}
+.bigger{
+    color: blue;
+    font-size: 2em;
+}
+.mushroomProperties strong, .violet{
+    color: rgb(141, 79, 241);
+    font-weight: bold;
+
+}
+.right{
+    text-align: right;
+}

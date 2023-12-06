@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="En Mundo Adaptógenos vas a encontrar los mejores concentrados de Hongos Adaptógenos, mucha experiencia y posibilidades de mejorar tu calidad de vida.">
+    <meta name="keywords"
+        content="Venta Hongos Adaptógenos, Triple Extracción, Melena de León, Cordyceps Militaris, Reishi, Cola de Pavo,  Màxima Pureza">
+    <title>Mundo Adaptógenos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/styles/cart.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Homenaje&family=Noto+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Carrito de Venta de Extractos Hongos Adaptógenos, Melena de León, Cordyceps Militaris, Reishi, Cola de Pavo, Màxima
+            Pureza</h1>
+        <nav>
+            <div id="menuCart">
+                <img id="atras" src="https://img.icons8.com/ios-filled/6A1C1C/left.png">
+                <p>Carrito de Compras</p>
+            </div>
+       </nav>
+    </header>
+    <main>
+        <div id="cart">
+            <div id="cartSelection">
+            </div>
+        </div>
+        <div id="cartEmpty">
+          <p>El carrito está vacío</p>
+          <div>
+            <img src="./assets/img/cartEmpty.svg" alt="">
+            <a href="./index.html#linkTarget"><div id="buttonToProducts">Ir a Productos</div></a>
+          </div>
+        </div>
+        <div id="cartSubtotalContainer">
+            <div id="cartSubtotal" class="container">
+                <div>
+                    <p><span>Productos: </span><span id="cartProductsSum">Suma</span></p>
+                    <p><span class="totalPrice">Total: Suma en AR$</span></p>
+                </div>
+                <div class="buttonShop" id="cartSend">Continuar compra</div>
+            </div>
+
+        </div>
+        <div class="formContainer">
+            <div class="login-box">
+                <div class="divClose"><span>
+                    <div class="lineLeft1Plus"></div>
+                    <div class="lineLeft2Plus"></div>
+                </span></div>
+                <div class="formContainerInner">
+                <h2>Datos de envío</h2>
+                <form name="formUser" id="formUser" required="">
+                  <div class="user-box">
+                    <input type="text" name="formNombre" id="formNombre" required="">
+                    <label>Nombre y Apellido</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="text" name="formDireccion" id="formDireccion" required="">
+                    <label>Calle y Número</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="text" name="formCodigoPostal" id="formCodigoPostal" required="">
+                    <label>Código Postal</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="text" name="formLocalidad" id="formLocalidad" required="">
+                    <label>Localidad</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="text" name="formProvincia" id="formProvincia" required="">
+                    <label>Provincia</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="text" name="formTelefono" id="formTelefono" required="">
+                    <label>Telefono</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="text" name="formEmail" id="formEmail" required="">
+                    <label>Correo Electrónico</label>
+                  </div>
+                  <div id="buttonSend">
+                    Enviar
+                  </div>
+                </form>
+                </div>
+              </div>
+        </div>
+        <!-- <dialog method="modal" id="dialog">
+            <p>¿Pudiste realizar el pedido?</p>
+            <div>
+                <button><span>Si</span><span>Reiniciar pedido</span></button>
+                <button><span>No</span><span>Editar pedido</span></button>
+            </div>
+        </dialog> -->
+    </main>
+    <script src="./assets/scripts/cart.js" type="module"></script>
+</body>
+</html>

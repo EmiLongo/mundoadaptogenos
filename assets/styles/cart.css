@@ -1,0 +1,248 @@
+#menuCart{
+    width: 100vw;
+    background-color: #FCDADA;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    color: #6A1C1C;
+    font-weight: bold;
+}
+#atras{
+    width: 10vw;
+    margin-left: 1em;
+}
+nav div p{
+    float: right;
+    margin-right: 2em;
+}
+.container {
+    display: flex;
+    align-items: center;
+    margin: 0.5em 0;
+    width: 97vw;
+    border: solid gray 0.5px;
+    border-radius: 10px;   
+     /* agregar sombra copada al border */
+    box-shadow: 6px 6px 5px -3px rgba(0,0,0,0.2);
+
+}
+.invisible{
+    display: none;
+}
+#cartEmpty{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5em;
+    color: #6A1C1C;
+
+    }
+#cartEmpty div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cartEmpty img{
+    width: 50%;
+
+}
+#buttonToProducts{
+    width: 30vw;
+    height: auto;
+    padding: 0.3em;
+    background-color: #FCDADA;
+    color: #6A1C1C;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+}
+.product{
+    color: #6A1C1C;
+}
+.combo{
+    /* background-color: #6A1C1C;
+    color:#FCDADA; */
+    background-color: #fceeee;
+    color: #6A1C1C;
+}
+.productLeft{
+    width: 17vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    font-size: 2.5em;
+    color: gray;
+    margin: 0.33em;
+} 
+.combo .buttomQuantity{
+    background-color:#ffffff;
+}
+.buttomQuantity{
+    background-color:#FCDADA;
+    width: 6vw;
+    height: 7vw;
+    margin: 0 0.5vw;
+    text-align: center;
+    border: solid 1px gray;
+    border-radius: 10px;
+    font-size: 0.5em;
+    color: black;
+}
+.productCenter img{
+    height: 5em;
+    width: auto;
+    margin-right: 1em;
+
+}
+.productRight{
+    width: 45vw;
+}
+.title{
+    margin: 0;
+}
+.price{
+    margin: 0;
+    padding-left: 1em;
+    font-size: 1.5em;
+}
+.delete img{
+    width: 5vw;
+    margin-right: 1em;
+}
+#cartSubtotalContainer{
+    height: 15vh;
+    background-color: white; 
+    /* no cubre arriba ni abajo de lo que necesito */
+}
+#cartSelection{
+    margin-bottom: 15vh;
+}
+#cartSubtotal{
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    background-color: #ffffff;
+}
+#cartSubtotal p{
+    margin-left: 1em;
+}
+.buttonShop{
+    width: 45vw;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin: 1em 1em 0.5em 1em;
+    padding: 0.2em 0;
+    color: black;
+    text-align: center;
+    font-size: 1.3em;
+}
+.formContainer{
+    position: fixed;
+    top: 0;
+    left: -101vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    transition: left 0.3s ease-out;
+}
+.formContainerVisible{
+    left: 0;
+}
+.divClose div{
+    font-size: 2.5em;
+    height: 0.7vw;
+    width: 0.5em;
+    background-color: gray;
+    color: gray;
+    margin-left: 0.15em;
+    
+}
+.divClose{
+    height: 2.5em;
+    width: 2.5em;
+    position: absolute;
+    right: 3.2vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+.divClose .lineLeft1Plus{
+    rotate: 45deg;
+}
+.divClose .lineLeft2Plus{
+    rotate: -45deg;
+    translate: 0 -0.55vw;
+}
+.login-box {
+    position: absolute;
+    height: auto;
+    top: 5vh;
+    width: 95%;
+    padding: 1em 40px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #6A1C1C;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #6A1C1C;
+    margin-bottom: 10%;
+    border: none;
+    border-bottom: 1px solid #6A1C1C;
+
+    outline: none;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color:  gray;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #6A1C1C;
+    font-size: 12px;
+  }
+  
+#buttonSend{
+    padding: 0.3em;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin: 0 1em;
+    color: black;
+    text-align: center;
+}  
+  
+
+
+  
+ 
+  

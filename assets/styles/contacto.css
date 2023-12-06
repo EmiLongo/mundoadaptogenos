@@ -1,0 +1,99 @@
+.subtitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    padding: 0 2em;
+    color:#6A1C1C;
+    font-family: 'Homenaje', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4em;
+    text-wrap: balance;
+    background-image: url(../img/logo.svg);
+    background: center;
+    background-size: cover;
+}
+.subtitle p {
+    margin: 0;
+}
+.subtitle img{
+    position: absolute;
+    opacity: 0.2;
+    width: 100%;
+
+}
+.formContainer{
+    margin: 10vh 0 5vh 2vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 96vw;
+    border: solid gray 0.5px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px -3px rgba(0,0,0,0.5);
+
+}
+.login-box {
+    height: auto;
+    width: 95%;
+    padding: 1em 40px;
+    box-sizing: border-box;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #6A1C1C;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input, .login-box .user-box textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #6A1C1C;
+    margin-bottom: 10%;
+    border: none;
+    border-bottom: 1px solid #6A1C1C;
+    border-right: 1px solid #6A1C1C61;
+    outline: none;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color:  gray;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label,
+  .login-box .user-box textarea:focus ~ label,
+  .login-box .user-box textarea:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #6A1C1C;
+    font-size: 12px;
+  }
+  
+#buttonSend{
+    float: right;
+    width: 60%;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin: 1em 0;
+    color: black;
+    text-align: center;
+}  

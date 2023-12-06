@@ -1,0 +1,55 @@
+.questionContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.questionAnswer{
+    padding: 0.2em 0;
+    color: #6A1C1C;
+    height: 12vh;
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+    margin-bottom: 1em;
+}
+h2{
+    text-align: center;
+    text-wrap: balance;
+
+}
+.circlePlus{
+    display: flex;
+    background-color: #6A1C1C;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+.circlePlus div{
+    width: 25px;
+    height: 0.6vw;
+    background-color: white;
+    
+}
+.line1Plus{
+    position: absolute;
+    rotate: 90deg;
+    transition: rotate 0.3s ease-out;
+}
+.line1PlusClick{
+    rotate: none;
+}
+.question{
+    margin-right: 1em;
+}
+.answer{
+    margin: 0 10vw;
+    width: 80%;
+    text-wrap: balance;
+    text-align: justify;
+    display: none;
+}
+.answer p:first-child{
+    margin-top: 1em;
+}
