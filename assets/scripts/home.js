@@ -26,6 +26,8 @@ catalogo.forEach((producto) => {
     
     let productCollapsedDiv = document.createElement("div");
     productCollapsedDiv.classList.add("items"); 
+    productCollapsedDiv.classList.add("productTagItems"); 
+    productCollapsedDiv.classList.add("invisible"); 
     productCollapsedDiv.classList.add("productCollapsed"); 
     productCollapsedDiv.classList.add(`${producto.type}`);
     productCollapsedDiv.id = producto.id;
@@ -157,13 +159,17 @@ divClose.addEventListener('click', function(){
 const productTagsTitle = document.querySelectorAll('.productTagTitle');
 const lines1PlusClick = document.querySelectorAll('.line1Plus')
 const productsTag = document.querySelectorAll('.productTag')
-
+const productTagItems = document.querySelectorAll('.productTagItems')
 productTagsTitle.forEach((productTagTitle, index) => {
     productTagTitle.addEventListener('click', () => {
         let calcHeight = `auto`;
         let calcHeightOriginal = '12vh';
 
         lines1PlusClick[index].classList.toggle('line1PlusClick');
+        const items = productTagTitle.parentElement.querySelectorAll('.items');
+        items.forEach((item) => {
+            item.classList.toggle('invisible');
+        });
         if (productsTag[index].style.height == calcHeight) {
             productsTag[index].style.height = calcHeightOriginal ;
         } else{

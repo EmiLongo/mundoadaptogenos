@@ -36,7 +36,7 @@ catalogo.forEach((producto) => {
     
     let cartProductDeleteDiv = document.createElement("div");
     cartProductDeleteDiv.classList.add("delete");
-    cartProductDeleteDiv.innerHTML = `<img src="https://img.icons8.com/windows/32/delete.png">`;
+    cartProductDeleteDiv.innerHTML = `<img src="./assets/img/trash.svg" alt="">`;
 
     let buttomDecrement = document.createElement("div");
     buttomDecrement.classList.add("buttomQuantity");

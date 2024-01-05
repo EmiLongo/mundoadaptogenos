@@ -28,14 +28,23 @@
                 <div id="menuLogo">
                     <a href="./index.html"><img id="logo" src="./assets/img/mundo_adaptogenos.svg" alt="Logo con Nombre"></a>
                 </div>
+                <div class="menuDesktop">
+                    <ul>
+                        <a href="./melena.html" class="menuHover"><li>Melena de León</li></a>
+                        <a href="./cordyceps.html" class="menuHover"><li>Cordyceps Militaris</li></a>
+                        <a href="./reishi.html" class="menuHover"><li>Reishi</li></a>
+                        <a href="./cola_pavo.html" class="menuHover"><li>Cola de Pavo</li></a>
+                    </ul>
+                </div>
                 <div id="menuCartIcon">
-                    <a href="./cart.html"><img width="48" height="48"
-                            src="https://img.icons8.com/sf-regular/48/6a1c1c/shopping-cart.png"
-                            alt="shopping-cart" /></a>
-                            <a href="./cart.html"><div id="cartPoint">
-                        <span id="cartProductsSum">0</span>
-
-                    </div></a>
+                    <a href="./cart.html"><img src="./assets/img/shopping-cart.svg" height="38" alt="shopping-cart" /></a>
+                    <a href="./cart.html"><div id="cartPoint"><span id="cartProductsSum">0</span></div></a>
+                </div>
+                <div class="menuDesktop">
+                    <ul>
+                        <a href="./preguntas_frecuentes.html" class="menuHover"><li>Preguntas Frecuentes</li></a>
+                        <li>Contacto</li>
+                    </ul>
                 </div>
                 <div id="menuDropdownIcon" class="icon">
                     <div class="line1"></div>
@@ -45,7 +54,7 @@
             </div>
             <div class="menuDropdown">
                 <ul class="ulPrimary">
-                    <a href="./index.html"><li>Home / Productos</li></a>
+                        <li>Home / Productos</li>
                     <ul>
                         <a href="./melena.html"><li>Melena de León</li></a>
                         <a href="./cordyceps.html"><li>Cordyceps Militaris</li></a>
@@ -53,7 +62,7 @@
                         <a href="./cola_pavo.html"><li>Cola de Pavo</li></a>
                     </ul>
                     <a href="./preguntas_frecuentes.html"><li>Preguntas Frecuentes</li></a>
-                    <li>Contacto</li>
+                    <a href="./contacto.html"><li>Contacto</li></a>
                 </ul>
             </div>
         </nav>
@@ -76,7 +85,7 @@
                         <textarea rows="4" name="formMsge" id="formMsge" required></textarea>                        <label>Deja tu comentario / consulta</label>
                     </div>
                     <div >
-                        <button id="buttonSend" type="submit">Send your message</button>
+                        <button id="buttonSend" type="submit">Enviar tu mensaje</button>
                     </div>
                 </form>
             </div>
@@ -136,6 +145,7 @@
                         <li><img width="24" height="24" src="https://img.icons8.com/ios-filled/50/fcdada/telegram.png" alt="telegram"/></li>
                     </a>
                     <!-- hacer lista de temas de spotify? -->
+                    <li id="shareURL">Compartir página <img width="24" height="24" src="./assets/img/logos_redes/share.svg" alt="Compartir-página"/></li>
                 </ul>
             </div>
             <div id="footerRight">
@@ -153,7 +163,7 @@
                 </ul>
             </div>
         </div>
-        <p>Derechos reservados © 2023. Emiliano Longo.</p>
+        <p>Derechos reservados © 2024. Emiliano Longo.</p>
     </footer>
     <script src="script.js"></script>
 </body>

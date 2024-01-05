@@ -62,12 +62,21 @@ function updateCartTotal2() {
 updateCartTotal2()
 
 
-// const menuFixed = document.querySelector('#menuFixed');
-// window.addEventListener("scroll", function() {
-//     // Cambia el color del menú cuando el usuario se desplaza hacia abajo
-//     if (window.scrollY > 180) { // Puedes ajustar el valor según sea necesario
-//         menuFixed.style.backgroundColor = "#FCDADA"; // Cambia a tu color deseado
-//     } else {
-//         menuFixed.style.backgroundColor = "#ecc4a0"; // Vuelve al color predeterminado
-//     }
-//   });
+const shareURL = document.querySelector('#shareURL');
+ 
+shareURL.addEventListener("click", (event) => {
+  if ("share" in navigator) {
+    navigator
+      .share({
+        title: "Página Web Mundo Adaptógenos",
+        url: 'https://mundoadaptogenos.netlify.app/'
+      })
+ 
+      .then(() => {
+        console.log("Contenido Compartido !");
+      })
+      .catch(console.error);
+  } else {
+    alert('Lo siento, este navegador no tiene soporte para recursos compartidos.')
+  }
+});
