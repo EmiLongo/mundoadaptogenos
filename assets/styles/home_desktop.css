@@ -55,6 +55,7 @@
         width: 35vh;
         height: 40vh;
         background-color: white;
+        font-size: 20px;
         text-align: center;
         text-wrap: balance;
         border-radius: 20px;
@@ -67,7 +68,7 @@
     }
     .inMotionCarrouselItem p{
         font-weight: bold;
-        margin: 0.5em;
+        margin: auto;
         color: #001928;
         fill-opacity:0.82352942;
    }
