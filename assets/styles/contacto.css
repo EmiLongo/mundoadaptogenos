@@ -25,7 +25,7 @@
 
 }
 .formContainer{
-    margin: 10vh 0 5vh 2vw;
+    margin: 2em auto;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -97,3 +97,24 @@
     color: black;
     text-align: center;
 }  
+
+@media (min-width: 922px) {
+  .formContainer{
+      width: 922px;
+      margin: 1em auto;
+  }
+  .subtitle{
+      width: 922px;
+      margin: 1em auto;
+  }
+  #buttonSend{
+    margin: 0;
+  }
+  .login-box {
+    height: auto;
+    width: 50%;
+    padding: 0em;
+    box-sizing: border-box;
+  }
+
+}

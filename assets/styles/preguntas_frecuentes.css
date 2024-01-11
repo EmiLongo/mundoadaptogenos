@@ -53,3 +53,17 @@ h2{
 .answer p:first-child{
     margin-top: 1em;
 }
+
+@media (min-width: 922px) {
+    main{
+        width: 922px;
+        margin: auto;
+    }
+
+    .circlePlus div{
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        
+    }
+}

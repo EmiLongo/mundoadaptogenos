@@ -25,7 +25,7 @@
             Pureza</h1>
         <nav>
             <div id="menuCart">
-                <img id="atras" src="https://img.icons8.com/ios-filled/6A1C1C/left.png">
+                <img id="atras" src="./assets/img/back.svg">
                 <p>Carrito de Compras</p>
             </div>
        </nav>
@@ -53,46 +53,51 @@
 
         </div>
         <div class="formContainer">
-            <div class="login-box">
-                <div class="divClose"><span>
+            <div class="formContainerBox">
+                <div class="divClose">
+                  <span>
                     <div class="lineLeft1Plus"></div>
                     <div class="lineLeft2Plus"></div>
-                </span></div>
+                  </span>
+                </div>
                 <div class="formContainerInner">
-                <h2>Datos de envío</h2>
-                <form name="formUser" id="formUser" required="">
-                  <div class="user-box">
-                    <input type="text" name="formNombre" id="formNombre" required="">
-                    <label>Nombre y Apellido</label>
+                  <h3>Para Correo Argentino</h3>
+                  <h2>Datos de envío</h2>
+                  <div id="formulario">
+                    <form name="formUser" id="formUser" required="">
+                      <div class="userBox" id="nombre">
+                        <input type="text" name="formNombre" id="formNombre" required="">
+                        <label>Nombre y Apellido</label>
+                      </div>
+                      <div class="userBox" id="direccion">
+                        <input type="text" name="formDireccion" id="formDireccion" required="">
+                        <label>Calle y Número</label>
+                      </div>
+                      <div class="userBox" id="codp">
+                        <input type="text" name="formCodigoPostal" id="formCodigoPostal" required="">
+                        <label>Código Postal</label>
+                      </div>
+                      <div class="userBox" id="localidad">
+                        <input type="text" name="formLocalidad" id="formLocalidad" required="">
+                        <label>Localidad</label>
+                      </div>
+                      <div class="userBox" id="provincia">
+                        <input type="text" name="formProvincia" id="formProvincia" required="">
+                        <label>Provincia</label>
+                      </div>
+                      <div class="userBox" id="telefono">
+                        <input type="text" name="formTelefono" id="formTelefono" required="">
+                        <label>Telefono</label>
+                      </div>
+                      <div class="userBox" id="email">
+                        <input type="email" name="formEmail" id="formEmail" required="">
+                        <label>Correo Electrónico</label>
+                      </div>
+                    </form>
                   </div>
-                  <div class="user-box">
-                    <input type="text" name="formDireccion" id="formDireccion" required="">
-                    <label>Calle y Número</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="text" name="formCodigoPostal" id="formCodigoPostal" required="">
-                    <label>Código Postal</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="text" name="formLocalidad" id="formLocalidad" required="">
-                    <label>Localidad</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="text" name="formProvincia" id="formProvincia" required="">
-                    <label>Provincia</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="text" name="formTelefono" id="formTelefono" required="">
-                    <label>Telefono</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="text" name="formEmail" id="formEmail" required="">
-                    <label>Correo Electrónico</label>
-                  </div>
-                  <div id="buttonSend">
-                    Enviar por Whatsapp
-                  </div>
-                </form>
+                    <div id="buttonSend">
+                      Enviar por Whatsapp
+                    </div>
                 </div>
               </div>
         </div>

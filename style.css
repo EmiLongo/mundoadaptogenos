@@ -24,7 +24,6 @@ footer a:link, footer a:visited, footer a:hover {
 @media (min-width: 1250px) {
     body{
         font-size: 20px;
-        /* ver de poner en 18px large y 20 xlarge */
     }
     #cartPoint{
         translate: 0.6vw -3.5vw;
@@ -36,6 +35,11 @@ footer a:link, footer a:visited, footer a:hover {
     }
     #cartPoint{
         translate: 0.75vw -4.5vw;
+    }
+}
+@media (min-width: 768px) and (max-width: 921.8px) {
+    body{
+        font-size: 17px;
     }
 }
 @media (min-width: 922px) {
@@ -183,7 +187,7 @@ footer a:link, footer a:visited, footer a:hover {
         background-image: url("./assets/img/under.svg");
         background-size: 40% auto;
         background-repeat: no-repeat;
-        background-position: 20vh 5vh;
+        background-position: 20vh 55px;
         text-align: center;
     }
     #socialNetworksLeft p{
@@ -225,14 +229,9 @@ footer a:link, footer a:visited, footer a:hover {
         font-family: 'Homenaje', sans-serif;
         
     }
-    /* .lineSeparator{
-        height: 2px;
-        width: 100vw;
-        background-color: #6A1C1C;
-    } */
-
 }
-@media (max-width: 767px) {
+/* mobile resolution */
+@media (max-width: 921.8px) {
     body{
         font-size: 16px;
     }
@@ -273,7 +272,7 @@ footer a:link, footer a:visited, footer a:hover {
         padding: 1vw 3vw;
         cursor: pointer;
     }
-
+    
     #menuDropdownIcon div{
         width: 70%;
         background-color: #6A1C1C;
@@ -281,7 +280,7 @@ footer a:link, footer a:visited, footer a:hover {
         margin: 1.7vw;
         transform-origin: 0 100%;
         transition: all 300ms ease;
-
+        
     }
     .line1click{
         transform: rotate(45deg);
@@ -293,7 +292,7 @@ footer a:link, footer a:visited, footer a:hover {
     .line3click{
         transform: rotate(-45deg);
     }
-
+    
     #cartPoint{
         position: absolute;
         width: 1.4em;
@@ -302,9 +301,9 @@ footer a:link, footer a:visited, footer a:hover {
         background-size:contain;
         text-align: center;
         translate: 2.2vw -11vw;
-
+        
     }
-
+    
     .menuDropdown{
         position: fixed;
         right: -100vw;
@@ -348,7 +347,7 @@ footer a:link, footer a:visited, footer a:hover {
         background-size: cover;
         background-repeat: no-repeat;
         height: 80vh;
-     }
+    }
     #callToAction{
         position: absolute;
         transform: translateY(30vh);
@@ -384,6 +383,9 @@ footer a:link, footer a:visited, footer a:hover {
         color:#FCDADA;
         font-size: 1.3em;
     }
+    #socialNetworksLeft p{
+        transform: translateY(-20px);
+    }
     #socialNetworksLeft{
         width: 40vw;
         background-image: url("./assets/img/under.svg");
@@ -398,7 +400,7 @@ footer a:link, footer a:visited, footer a:hover {
         padding: 2vw;
     }
 
-
+    
     footer{
         position: relative;
         top: 2em;
@@ -406,7 +408,7 @@ footer a:link, footer a:visited, footer a:hover {
         background-color: #6A1C1C;
         color: #FCDADA;
         font-family: 'Homenaje', sans-serif;
-
+        
     }
     #footerContainer{
         display: flex;
@@ -419,13 +421,57 @@ footer a:link, footer a:visited, footer a:hover {
         text-align: center;
         padding: 1em 0;
         color: #FCDADA;
-
+        
     }
     .lineSeparator{
         height: 2px;
         width: 100vw;
         background-color: #6A1C1C;
     }
-
-
+    
+    
+}
+/* tablet resolution */
+@media (min-width: 768px) and (max-width: 921.8px) {
+    #callToAction{
+         margin: 0;
+        width: 100vw;
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        font-size: 1.3em;
+        padding: 0 15vw;
+    }   
+    #menuDropdownIcon div{
+        width: 50%;
+        background-color: #6A1C1C;
+        height: 4px;
+        margin: 1.3vw;
+        transform-origin: 0 100%;
+        transition: all 300ms ease;
+        
+    }
+    .menuDropdown{
+        top: 5em;
+    }   
+    #socialNetworks{
+        height: 17vh;
+        font-size: 2em;
+    }
+    footer{
+        height: 120%;
+        margin-bottom: 2em;
+        
+    }
+    #footerContainer{
+        display: flex;
+    }
+    #footerLeft{
+        text-align: right;
+        margin-right: 10vw;
+        width: 40vw;
+    }
+    footer > p{
+        text-align: center;
+        padding: 1em 0;
+    }    
 }

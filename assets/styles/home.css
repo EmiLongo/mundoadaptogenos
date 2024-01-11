@@ -1,4 +1,3 @@
-/* @media (max-width: 767px) { */
 @media (max-width: 921px) {
     #inMotionCarrousel{
         display: flex;
@@ -250,7 +249,7 @@
     }
     .itemSell .divClose div{
         font-size: 2.5em;
-        height: 0.7vw;
+        height: 3px;
         width: 0.5em;
         background-color: gray;
         color: gray;
@@ -272,7 +271,7 @@
     }
     .itemSell .divClose .lineLeft1Plus{
         rotate: 45deg;
-        translate: -0.2vw 0.55vw;
+        translate: -0.2vw 4px;
     }
     .itemSell .divClose .lineLeft2Plus{
         rotate: -45deg;
@@ -327,6 +326,7 @@
     .singleProductCarrousel img{
         margin: 0 10vw;
         height: 100%;
+        border-radius: 10%;
     }
     .prices{
         margin-top: 1vh;
@@ -338,7 +338,6 @@
         font-size: 1.5em;
     }
     .combo .priceBefore{
-        /* margin-left: 3em; */
         text-decoration: line-through;
         text-decoration-line: line-through;
     }
@@ -397,7 +396,7 @@
         border: solid 1px gray;
         border-radius: 10px;
         font-size: 1.3em;
-        color: black;
+        color: #280600d2;
     }
 
     #buttonContainer{
@@ -442,6 +441,7 @@
         border-radius: 10px;   
         /* agregar sombra copada al border */
         box-shadow: 6px 6px 5px -3px #001928d2;
+        transition: all 0.3s ease-out;
     }
 
     .productCollapsed .productLeft div{
@@ -460,8 +460,8 @@
     .productCollapsed .productCenter img{
         height: 5em;
         width: auto;
-        margin: 1em;
-        aspect-ratio: 2/3;
+        margin: 0.5em;
+        border-radius: 50%;
     }
     .productCollapsed .title{
         margin: 0;
@@ -488,4 +488,141 @@
         text-transform: uppercase;
         margin-bottom: 0;
     }
+}
+@media (min-width: 768px) and (max-width: 921.8px) {
+    .circlePlus{
+        display: flex;
+        background-color: #6A1C1C;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        margin: 6.5vw 1vw 6.5vw 12vw;
+    }   
+    .circlePlus div{
+        height: 3px;
+    }
+    .productTag{
+        height: auto !important;
+        transition: all .3s ease-out;
+        
+    }
+    .invisible{
+        height: 0;
+        color: white;
+        overflow: hidden;
+        box-shadow: none;
+        border: none;
+    }
+    .productBenefits{
+        margin: auto;
+        width: 60%;
+        font-size: 1.1em;
+        transform: translateY(-4vw);
+    }
+    .productTag>img{
+        float: left;
+
+    }
+    .productTagTitle{
+        display: flex;
+    }
+    .productTagP{
+        font-weight: bold;
+        font-size: 1.7em;
+        transform: translateX(-15vw);
+    }
+    .productCollapsed .productLeft div{
+        height: 3px;
+        margin-left: 2em;
+        margin-right: 1em;
+    }
+    .productRight{
+        width: 60%;
+        margin: auto;
+    }
+    .itemSell .divClose{
+        transform: translateX(-70px);
+    }
+    .itemSell .divClose div{
+        height: 3px;
+    }
+    .itemSell .divClose .lineLeft1Plus{
+        rotate: 45deg;
+        translate: -0.2vw 4px;
+    }
+    .itemSell .divClose .lineLeft2Plus{
+        rotate: -45deg;
+        translate: -0.2vw 0vw;
+    }
+    
+    
+    .itemSell{
+        background-color: white;
+        margin-top: 2.5vh;
+        width: 760px;
+        height: 75vh;
+        border: solid gray 0.5px;
+        border-radius: 10px;
+        box-shadow: 6px 6px 5px -3px #001928d2;
+    }
+    #buttonContainer{
+        width: 760px;
+        border-radius: 10px;
+        box-shadow: 6px 6px 5px -3px #001928d2;
+    }
+    .buttonShop, .buttonAddCart{
+        width: 42%;
+        font-size: 1.5em;
+        color: #280600d2;
+        box-shadow: 6px 6px 5px -3px #001928d2;
+        cursor: pointer;
+    }
+     .circleText{
+        font-size: 2.5em;
+        padding: 0.35em;
+    }
+    #itemTitleContainer{
+        height: 15vh;
+    }
+    /* cambiar */
+    .singleProductCarrousel{
+        height: 38vh;
+    }
+    .singleProductCarrousel img{
+        height: 100%;
+        border-radius: 20px;
+    }
+
+    .itemSellPrices{
+        display: flex;
+        flex-direction: column;
+        margin-left: 4em;
+        transform: translateY(-9em);
+        height: 0;
+    }
+    .itemSellPrice{
+        font-size: 1.5em;
+    }
+    .sellFeature{
+        align-self: center;
+        font-size: 0.8em;
+        margin: 0em 4em ;
+        height: 8vh;
+    }
+    .textGreen{
+        color: #23A628 ;
+    }
+    .productsSum{
+        grid-area: productsSum;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .productsSumText{
+        margin-left: 2vw;
+    }
+
+    
 }

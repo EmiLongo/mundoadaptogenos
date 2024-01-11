@@ -1,176 +1,387 @@
 body{
     background-color: rgba(0, 0, 0, 0.0005);
 }
-#melenaMushroomTitle{
-    background-image: url("../img/melena/melena4.jpg");
-}
-#cordycepsMushroomTitle{
-    background-image: url("../img/cordyceps/cordyceps03.jpg");
-}
-#colapavoMushroomTitle{
-    background-image: url("../img/cola_pavo/cola_pavo10.jpg");
-}
-#reishiMushroomTitle{
-    /* cambiar */
-    background-image: url("../img/reishi/reishi1.jpeg");
-}
-
 .mushroomTitle{
     margin: 0;
-    background-position: center;
+    width: 100vw;
     height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border-radius: 15%; */
-}
-.mushroomTitle h2{
-    font-size: 4em;
-    margin: 0;
-    margin-bottom: 0.5em;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: .11em;
-    text-shadow: -1px -1px 0px #00000045,
-    3px 3px 0px #00000095,
-    6px 6px 0px #00000055;
+    overflow: hidden;
 }
 
-.mushroomTitle h3{
-    margin: 0.5em;
-    font-family: 'Homenaje', sans-serif;
-    font-size: 2em;
-    font-style: italic;
-    background-color: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    /* background-color: rgba(17, 25, 40, 0.75); */
+.mushroomTitle img{
+    min-height: 100vh;
+    min-width: 100vw;
+    object-fit: cover;
+    overflow: hidden;
 }
-#cordycepsMushroomTitle{
-    font-size: 0.8em;
-}
-#colapavoMushroomTitle{
-    color: white;
+@media (min-width: 922px) {
+    .mushroomTitle h2{
+        position: absolute;
+        font-size: 4em;
+        margin: 0;
+        margin-bottom: 0.5em;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: .11em;
+        text-shadow: -1px -1px 0px #00000045,
+        3px 3px 0px #00000095,
+        6px 6px 0px #00000055;
+    }
+
+    .mushroomTitle h3{
+        position: absolute;
+        transform: translateY(-2.5em);
+        margin: 0.5em;
+        font-family: 'Homenaje', sans-serif;
+        font-size: 2em;
+        font-style: italic;
+        background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        /* background-color: rgba(17, 25, 40, 0.75); */
+    }
+    #cordycepsMushroomTitle{
+        font-size: 0.8em;
+    }
+    #colapavoMushroomTitle{
+        color: white;
+    }
+
+    .mushroomSubtitle{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(0,0,0,0.8);
+        background-color: #FCDADA;
+        /* background-color: #eeaeca61; */
+        height: 5em;
+        font-family: 'Homenaje', sans-serif;
+        font-size: 1.7em;
+        text-align: center;
+        line-height: 1.4em;
+        
+    }
+    .mushroomSubtitle p{
+        width: 720px;
+        margin: 1.5em auto;
+    }
+    #reishiMushroomSubtitle{
+        padding: 0 1em;
+    
+    }
+    #indexPage{
+        background-color: white;
+        width: 922px;
+        margin: auto;
+    }
+    #indexPage h2{
+        font-size: 1.5em;
+        padding-top: 1em;
+        text-wrap: balance;
+        text-align: right;
+        color: rgb(126, 54, 241);
+    }
+    #indexPage ul{
+        font-size: 1em;
+    }
+    #indexPage li{
+        padding: 0.5em 0;
+        cursor: pointer;
+    }
+    
+    #indexPage a:link, #indexPage a:visited, #indexPage a:hover, #indexPage a:active{
+        text-decoration: none;
+    }
+    
+    .mushroomComponentsContainer{
+        width: 922px;
+        margin: 2em auto;
+    }
+    #mushroomComponents{
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 40% auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "mushroomComponentsh2 mushroomComponentsul"
+            "mushroomComponentsh3 mushroomComponentsul"
+            "mushroomComponentsFooter mushroomComponentsFooter"
+            
+            ;
+        align-items: center;
+        /* background: radial-gradient(circle, rgba(251,167,63,0.2) 15%, rgba(173,49,74,0.05) 100%); */
+        border-radius: 20px;
+        border-image: fill 0 linear-gradient(#0001, #e9acac);
+        width: 100%;
+        height: 100%;
+        box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.55);
+    }
+    
+    #mushroomComponents h2{
+        grid-area: mushroomComponentsh2;
+        font-size: 1.5em;
+        color: rgb(141, 79, 241);
+        text-align: center;
+    }
+    #mushroomComponents h3{
+        grid-area: mushroomComponentsh3;
+        color:#6A1C1C;
+        padding: 0 1vw;
+        text-align: center;
+    }
+    #mushroomComponents ul{
+        grid-area: mushroomComponentsul;
+        margin-right: 1em;
+        list-style-type: none;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.45);
+        border-radius: 10px;
+        border: 1px solid rgba(209, 213, 219, 0.3);
+        overflow: hidden;
+    }
+    #mushroomComponents ul img{
+        position: absolute;
+        opacity: 0.35;
+        transform: translateX(-100px);
+    }
+    #mushroomComponents h3:last-child{
+        grid-area: mushroomComponentsFooter;
+        height: 2em;
+        color: azure;
+    }
+    #colapavoMushroomComponentsContainer #mushroomComponents h3:last-child{
+        display: none;
+    }
+    .red{
+        color:red;
+        font-weight: bold;
+    }
+    .center{
+        text-align: center;
+    }
+    .bigger{
+        color: blue;
+        font-size: 2em;
+    }
+    .right{
+        text-align: right;
+        padding-right: 2em;
+    }
+    
+    .mushroomProperties{
+        background-color: white;
+        width: 922px;
+        margin: auto;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+        text-align: justify;
+    }
+    .mushroomProperties h2{
+        font-size: 1.5em;
+        padding-top: 1em;
+        text-wrap: balance;
+        text-align: center;
+        color: rgb(126, 54, 241);
+    }
+    .mushroomProperties p{
+        padding: 0.5em;
+        text-wrap: balance;
+    }
+    .mushroomProperties strong, .violet{
+        color: rgb(141, 79, 241);
+        font-weight: bold;
+        
+    }
+    
+    .mushroomImg{
+        display: flex;
+        align-items: center;
+        width: 922px;
+        max-height: 100vh;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .mushroomImg img{
+        width: 922px;
+    }
 }
 
-.mushroomSubtitle{
-    display: flex;
-    align-items: center;
-    color: rgba(0,0,0,0.8);
-    background-color: #FCDADA;
-    /* background-color: #eeaeca61; */
-    height: 30vh;
-    padding: 0 2em;
-    font-family: 'Homenaje', sans-serif;
-    font-size: 2em;
-    text-align: center;
-    line-height: 1.4em;
 
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-}
-#reishiMushroomSubtitle{
-    padding: 0 1em;
-    font-size: 1.7em;
 
-}
-.mushroomProperties{
-    background-color: white;
-    width: 95vw;
-    margin: 2.5vw;
-    border-radius: 20px;
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-    text-align: justify;
-}
-#indexPage{
-    background-color: white;
+/* @media (max-width: 767px) { */
+@media (max-width: 921px) {
+        
+    .mushroomTitle{
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mushroomTitle img{
+        min-height: 100vh;
+        min-width: 100vw;
+    }
 
-}
-#indexPage h2, .mushroomProperties h2{
-    font-size: 2em;
-    padding-top: 1em;
-    text-wrap: balance;
-    text-align: center;
-    color: rgb(126, 54, 241);
-}
-#indexPage ul{
-    font-size: 1.5em;
-}
-#indexPage li{
-    padding: 0.5em;
-    cursor: pointer;
-}
+    .mushroomTitle h2{
+        position: absolute;
+        font-size: 4em;
+        margin: 0;
+        margin-bottom: 0.5em;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: .11em;
+        text-shadow: -1px -1px 0px #00000045,
+        3px 3px 0px #00000095,
+        6px 6px 0px #00000055;
+    }
 
-#indexPage a:link, #indexPage a:visited, #indexPage a:hover, #indexPage a:active{
-    text-decoration: none;
-}
+    .mushroomTitle h3{
+        position: absolute;
+        transform: translateY(-5em);
+        margin: 0.5em;
+        font-family: 'Homenaje', sans-serif;
+        font-size: 2em;
+        font-style: italic;
+        background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        /* background-color: rgba(17, 25, 40, 0.75); */
+    }
+    #cordycepsMushroomTitle{
+        font-size: 0.8em;
+    }
+    #colapavoMushroomTitle{
+        color: white;
+        text-shadow: -1px -1px 0px #6A1C1C,
+        2px 2px 0 #945a5a,
+        4px 4px 0 #e9acac;
+    }
 
-.mushroomProperties p{
-    font-size: 1.5em;
-    padding: 0.5em;
-    text-wrap: balance;
-}
+    .mushroomSubtitle{
+        display: flex;
+        align-items: center;
+        color: rgba(0,0,0,0.8);
+        background-color: #FCDADA;
+        /* background-color: #eeaeca61; */
+        height: 30vh;
+        padding: 0 2em;
+        font-family: 'Homenaje', sans-serif;
+        font-size: 2em;
+        text-align: center;
+        line-height: 1.4em;
 
-.mushroomImg img{
-    width: 100%;
-    height: auto;
-}
-/* #mushroomComponentsContainer{
-    background-image: url("../img/melena/melena4.jpg");
-    background-position: center;
-} */
-#mushroomComponents{
-    /* background-color: rgba(223, 165, 165, 0.15); */
-    /* background: radial-gradient(circle, rgba(148,63,251,0.4) 15%, rgba(173,49,74,0.05) 100%); */
-    background: radial-gradient(circle, rgba(251,167,63,0.2) 15%, rgba(173,49,74,0.05) 100%);
-    margin: 2.5vw;
-    width: 95vw;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.55);
-}
-#mushroomComponents h2{
-    padding: 10vw 10vw 0 10vw;
-    font-size: 2em;
-    color: rgb(141, 79, 241);
-    text-align: center;
-}
-#mushroomComponents h3{
-    color: rgba(0,0,0,0.75);
-    padding: 0 5vw;
-    text-align: center;
-}
-#mushroomComponents ul{
-    list-style-type: none;
-    font-size: 1.5em;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+    }
+    #reishiMushroomSubtitle{
+        padding: 0 1em;
+        font-size: 1.7em;
 
-}
-#mushroomComponents h3:last-child{
-    padding-bottom: 10vw;
+    }
+    .mushroomProperties{
+        background-color: white;
+        width: 95vw;
+        margin: 2.5vw;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+        text-align: justify;
+    }
+    #indexPage{
+        background-color: white;
 
-}
+    }
+    #indexPage h2, .mushroomProperties h2{
+        font-size: 2em;
+        padding-top: 1em;
+        text-wrap: balance;
+        text-align: center;
+        color: rgb(126, 54, 241);
+    }
+    #indexPage ul{
+        font-size: 1.5em;
+    }
+    #indexPage li{
+        padding: 0.5em;
+        cursor: pointer;
+    }
 
-#mushroomComponents li{
-    padding: 0.3em;
-}
-.red{
-    color:red;
-    font-weight: bold;
-}
-.center{
-    text-align: center;
-}
-.bigger{
-    color: blue;
-    font-size: 2em;
-}
-.mushroomProperties strong, .violet{
-    color: rgb(141, 79, 241);
-    font-weight: bold;
+    #indexPage a:link, #indexPage a:visited, #indexPage a:hover, #indexPage a:active{
+        text-decoration: none;
+    }
 
-}
-.right{
-    text-align: right;
+    .mushroomProperties p{
+        font-size: 1.5em;
+        padding: 0.5em;
+        text-wrap: balance;
+    }
+
+    .mushroomImg img{
+        width: 100%;
+        height: auto;
+    }
+    #mushroomComponents{
+        background: radial-gradient(circle, rgba(251,167,63,0.2) 15%, rgba(173,49,74,0.05) 100%);
+        margin: auto;
+        width: 95vw;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.55);
+    }
+    #mushroomComponents h2{
+        padding: 10vw 10vw 0 10vw;
+        font-size: 2em;
+        color: rgb(141, 79, 241);
+        text-align: center;
+    }
+    #mushroomComponents h3{
+        color: rgba(0,0,0,0.75);
+        padding: 0 5vw;
+        text-align: center;
+    }
+    #mushroomComponents ul{
+        margin: auto;
+        padding: 0;
+        list-style-type: none;
+        font-size: 1.5em;
+    }
+    #mushroomComponents ul img{
+        display: none;
+    }
+    #mushroomComponents h3:last-child{
+        padding-bottom: 10vw;
+
+    }
+
+    #mushroomComponents li{
+        padding: 0.3em 2em;
+    }
+    .red{
+        color:red;
+        font-weight: bold;
+    }
+    .center{
+        text-align: center;
+    }
+    .bigger{
+        color: blue;
+        font-size: 2em;
+    }
+    .mushroomProperties strong, .violet{
+        color: rgb(141, 79, 241);
+        font-weight: bold;
+
+    }
+    .right{
+        text-align: right;
+    }
 }
