@@ -72,20 +72,20 @@
         <div class="formContainer">
             <h2>Contáctanos</h2>
             <div class="login-box">
-                <form action="./assets/datos_consultas.html" method="post" name="formUser" id="formUser" required="" data-netlify="true">
+                <form action="https://formsubmit.co/abd9d756e8f01d927d3d9f52a1783b62" method="POST" name="formUser" id="formUser" required="" data-netlify="true">
                     <div class="user-box">
-                        <input type="text" name="formNombre" id="formNombre" required="">
-                        <label>Nombre y Apellido</label>
+                        <input type="text" name="username" id="username" required="">
+                        <label for="username">Nombre y Apellido</label>
                     </div>
                     <div class="user-box">
-                        <input type="text" name="formEmail" id="formEmail" required="">
-                        <label>Correo Electrónico</label>
+                        <input type="email" name="email" id="email" required="">
+                        <label for="email">Correo Electrónico</label>
                     </div>
                     <div class="user-box">
-                        <textarea rows="4" name="formMsge" id="formMsge" required></textarea>                        <label>Deja tu comentario / consulta</label>
+                        <textarea rows="4" name="message" id="message" required></textarea>                        <label>Deja tu comentario / consulta</label>
                     </div>
                     <div >
-                        <button id="buttonSend" type="submit">Enviar tu mensaje</button>
+                        <button id="buttonSend" type="submit" for="formUser">Enviar tu mensaje</button>
                     </div>
                 </form>
             </div>
@@ -168,5 +168,7 @@
         <p>Derechos reservados © 2024. Emiliano Longo.</p>
     </footer>
     <script src="script.js"></script>
+    <script src="./assets/scripts/contacto.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
 </html>

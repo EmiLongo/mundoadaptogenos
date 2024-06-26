@@ -1,6 +1,14 @@
 import{ catalogo } from './catalogue.js';
 
 let cartSelection = document.getElementById("cartSelection");
+let datos={
+    nombre: '',
+    direccion: '',
+    codigoPostal: '',
+    localidad: '',
+    provincia: '',
+    telefono: '',
+    email: ''}
 
 catalogo.forEach((producto) => {
     //     // agrega los div del carrito de compras
@@ -73,14 +81,9 @@ atras.addEventListener('click', function(){
 );
 
 // define variables del usuario
-localStorage.setItem('nombre', '');
-localStorage.setItem('direccion', '');
-localStorage.setItem('codigopostal', '');
-localStorage.setItem('localidad', '');
-localStorage.setItem('provincia', '');
-localStorage.setItem('telefono', '');
-localStorage.setItem('email', '');
 
+
+// localStorage.setItem("datos", JSON.stringify(datos));
 
 const units = document.querySelectorAll('.units');
 const cartDecrements = document.querySelectorAll('.cartDecrement');
@@ -160,7 +163,7 @@ function actualizarTotal() {
         cartSubtotal.style.display = "none";
         cartEmpty.style.display = "block";
     } else {
-        cartSubtotal.style.display = "blocknone";
+        cartSubtotal.style.display = "block";
         cartEmpty.style.display = "none";
     }
 };
@@ -193,26 +196,26 @@ const cartSend = document.getElementById('cartSend');
 cartSend.addEventListener('click', () =>{
     formContainer.classList.add('formContainerVisible')
     // fijarse los datos de la persona en las cookies
-    if (localStorage.getItem('nombre')) {
-        formNombre.value = localStorage.getItem('nombre')
+    if (localStorage.getItem('datos')) {
+        formNombre.value = localStorage.getItem('datos.nombre')
     };
-    if (localStorage.getItem('direccion')) {
-        formDireccion.value = localStorage.getItem('direccion')
+    if (localStorage.getItem('datos')) {
+        formDireccion.value = localStorage.getItem('datos.direccion')
     };
-    if (localStorage.getItem('codigopostal')) {
-        formCodigoPostal.value = localStorage.getItem('codigopostal')
+    if (localStorage.getItem('datos')) {
+        formCodigoPostal.value = localStorage.getItem('datos.codigoPostal')
     };
-    if (localStorage.getItem('localidad')) {
-        formLocalidad.value = localStorage.getItem('localidad')
+    if (localStorage.getItem('datos')) {
+        formLocalidad.value = localStorage.getItem('datos.localidad')
     };
-    if (localStorage.getItem('provincia')) {
-        formProvincia.value = localStorage.getItem('provincia')
+    if (localStorage.getItem('datos')) {
+        formProvincia.value = localStorage.getItem('datos.provincia')
     };
-    if (localStorage.getItem('telefono')) {
-        formTelefono.value = localStorage.getItem('telefono')
+    if (localStorage.getItem('datos')) {
+        formTelefono.value = localStorage.getItem('datos.telefono')
     };
-    if (localStorage.getItem('email')) {
-        formEmail.value = localStorage.getItem('email')
+    if (localStorage.getItem('datos')) {
+        formEmail.value = localStorage.getItem('datos.email')
     };
 })
 
@@ -230,23 +233,27 @@ buttonSend.addEventListener('click', () => {
         formEmail.value === ''
     ) {
         alert('Por favor, completa todos los campos antes de enviar el pedido.');
-        return; // Detener la ejecución si hay campos vacíos
+        return
     }
 
-    // Grabar los datos de la persona en las cookies
-    localStorage.setItem('nombre', formNombre.value);
-    localStorage.setItem('direccion', formDireccion.value);
-    localStorage.setItem('codigopostal', formCodigoPostal.value);
-    localStorage.setItem('localidad', formLocalidad.value);
-    localStorage.setItem('provincia', formProvincia.value);
-    localStorage.setItem('telefono', formTelefono.value);
-    localStorage.setItem('email', formEmail.value);
+
+    datos = {
+        nombre: formNombre.value,
+        direccion: formDireccion.value,
+        codigoPostal: formCodigoPostal.value,
+        localidad: formLocalidad.value,
+        provincia: formProvincia.value,
+        telefono: formTelefono.value,
+        email: formEmail.value
+    }
+    localStorage.setItem('datos', JSON.stringify(datos));
 
     SendMessage();
 })
 function SendMessage(){
     let order=``
     let total=0
+    let datosGuardados = JSON.parse(localStorage.getItem('datos'));
     for (let i = 1; i <= 11; i++) {
     
         let key = i>= 10 ? "0" + i : "00" + i;
@@ -262,38 +269,29 @@ function SendMessage(){
       }    // sumar los datos de la persona en el msj
     order += `Total = $AR ${total}`;
     const message = `
-Hola! Soy ${localStorage.getItem('nombre')}. Te quiero hacer el siguiente pedido:
+Hola! Soy ${datosGuardados.nombre}. Te quiero hacer el siguiente pedido:
 
 ${order} 
 
-Si te querés comunicar conmigo lo podés hacer a este número o al ${localStorage.getItem('telefono')}.
+Si te querés comunicar conmigo lo podés hacer a este número o al ${datosGuardados.telefono}.
 
 Los datos del envío son:
-Dirección: ${localStorage.getItem('direccion')}
-Localidad: ${localStorage.getItem('localidad')}
-C.P.: ${localStorage.getItem('codigopostal')}
-Provincia: ${localStorage.getItem('provincia')}
-Email: ${localStorage.getItem('email')}
+Dirección: ${datosGuardados.direccion}
+Localidad: ${datosGuardados.localidad}
+C.P.: ${datosGuardados.codigopostal}
+Provincia: ${datosGuardados.provincia}
+Email: ${datosGuardados.email}
 
 Muchas gracias!
 `
     const link = `http://wa.me/+5493412423633?text=${encodeURI(message)}`
     window.open(link, '_blank');
 
-    newWindow.addEventListener('load', function() {
-        // Este código se ejecutará cuando la nueva ventana esté completamente cargada
-        let sendDecision = confirm('¿Pudiste enviar el pedido?');
-        
-        if (sendDecision) {
-            localStorage.clear();
-            location.replace('./index.html');
-        }
-    })
-    // let sendDecision = confirm('¿Pudiste enviar el pedido?')
-    // if(sendDecision){
-    //     localStorage.clear();
-    //     location.replace('./index.html');
-    // }
+    let sendDecision = confirm('¿Pudiste enviar el pedido?');
+    if (sendDecision) {
+        localStorage.clear();
+        location.replace('./index.html');
+    }
 }
 
 const formContainer = document.querySelector('.formContainer')
